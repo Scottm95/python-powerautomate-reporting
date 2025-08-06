@@ -28,13 +28,13 @@ It reduces a 30-minute daily task down to 5 minutes by  cleaning and formatting 
 ---
 ## Example Files
 Included  one sample CSV (with all sensitive data removed) to demonstrate the cleaning steps:
-- `DF Payment Support.csv`: uncleaned version - csv file  
-- `Payment_Support_Excel_File.xlsx`: Excel file created after Python processing
+- `sample_raw.csv`: uncleaned version - csv file  
+- `sample_cleaned.xlsx`: Excel file created after Python processing
 ---
 
 ---
 ## Python Script Highlights
-df = pd.read_csv("DF Payment Support.csv")
+df = pd.read_csv("sample_raw.csv")
 df.columns = df.columns.str.encode("ascii", errors="ignore").str.decode("ascii").str.strip()
 df["Created"] = pd.to_datetime(df["Created"]).dt.strftime('%d/%m/%Y')
 df.to_excel("Payment_Support_Excel_File.xlsx", sheet_name="Query (1)", index=False)
@@ -66,4 +66,5 @@ flow_overview.png
 
 
 ## Note
+
 Sample files included here are stripped of any sensitive customer or employee information.
