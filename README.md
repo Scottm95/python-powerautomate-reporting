@@ -41,7 +41,7 @@ Automates daily reporting file delivery for downstream dashboards (Tableau). A P
 
 
 ## Files
-- `clean_and_convert_csv.py` – transformation script*
+- `clean_and_convert_csv.py` – transformation script
 - `sample_raw.csv` – anonymised example input
 - `sample_cleaned.xlsx` – example output after processing
 - `flow_overview.png` – automation overview
@@ -49,6 +49,7 @@ Automates daily reporting file delivery for downstream dashboards (Tableau). A P
 - `data_quality.md` – cleaning/standardisation rules and validation notes
 
 > Note: This repo includes a simplified example script showing the core transforms (header cleaning + `Created` standardisation). In production, the same logic is applied across 8 daily CSV extracts on a scheduled run.
+
 
 
 
